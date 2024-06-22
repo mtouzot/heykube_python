@@ -25,7 +25,7 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/heykube/heykube-python
+    $ git clone git://github.com/mtouzot/heykube-python
 
 Once you have a copy of the source, you can install it with:
 

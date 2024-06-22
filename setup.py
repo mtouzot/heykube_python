@@ -6,12 +6,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setuptools.setup(
     name="heykube", # Replace with your own username
     version="0.5.0",
-    author="Dave Garrett",
-    author_email="info@22ndsolutions.com",
+    author="Dave Garrett, Martin TOUZOT",
+    author_email="info@22ndsolutions.com, martin.touzot@gmail.com",
     description="Implements Python-based interface library for HEYKUBE (http://www.heykube.com)",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="https://github.com/mtouzot/heykube_python",
     packages=setuptools.find_packages(),
     scripts=['scripts/heykube_cli.py'],
     classifiers=[
