@@ -47,7 +47,63 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cli.html">CLI</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#heykube.heykube"><code class="docutils literal notranslate"><span class="pre">heykube</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.append_instructions"><code class="docutils literal notranslate"><span class="pre">heykube.append_instructions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.clear_instructions"><code class="docutils literal notranslate"><span class="pre">heykube.clear_instructions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.clear_notify"><code class="docutils literal notranslate"><span class="pre">heykube.clear_notify()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.connect"><code class="docutils literal notranslate"><span class="pre">heykube.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.disable_match"><code class="docutils literal notranslate"><span class="pre">heykube.disable_match()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.disable_notifications"><code class="docutils literal notranslate"><span class="pre">heykube.disable_notifications()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.disable_sounds"><code class="docutils literal notranslate"><span class="pre">heykube.disable_sounds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.disconnect"><code class="docutils literal notranslate"><span class="pre">heykube.disconnect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.enable_match"><code class="docutils literal notranslate"><span class="pre">heykube.enable_match()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.enable_notifications"><code class="docutils literal notranslate"><span class="pre">heykube.enable_notifications()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.enable_pattern"><code class="docutils literal notranslate"><span class="pre">heykube.enable_pattern()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.enable_sounds"><code class="docutils literal notranslate"><span class="pre">heykube.enable_sounds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.flash_all_lights"><code class="docutils literal notranslate"><span class="pre">heykube.flash_all_lights()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.get_device"><code class="docutils literal notranslate"><span class="pre">heykube.get_device()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.get_notify"><code class="docutils literal notranslate"><span class="pre">heykube.get_notify()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.get_pattern_name"><code class="docutils literal notranslate"><span class="pre">heykube.get_pattern_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.get_pattern_names"><code class="docutils literal notranslate"><span class="pre">heykube.get_pattern_names()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.get_seq_num"><code class="docutils literal notranslate"><span class="pre">heykube.get_seq_num()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.get_timestamp"><code class="docutils literal notranslate"><span class="pre">heykube.get_timestamp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.initialize"><code class="docutils literal notranslate"><span class="pre">heykube.initialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.is_solved"><code class="docutils literal notranslate"><span class="pre">heykube.is_solved()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.light_led"><code class="docutils literal notranslate"><span class="pre">heykube.light_led()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.play_sound"><code class="docutils literal notranslate"><span class="pre">heykube.play_sound()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.print_cube"><code class="docutils literal notranslate"><span class="pre">heykube.print_cube()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_accel"><code class="docutils literal notranslate"><span class="pre">heykube.read_accel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_battery"><code class="docutils literal notranslate"><span class="pre">heykube.read_battery()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_instructions"><code class="docutils literal notranslate"><span class="pre">heykube.read_instructions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_moves"><code class="docutils literal notranslate"><span class="pre">heykube.read_moves()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_status"><code class="docutils literal notranslate"><span class="pre">heykube.read_status()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_version"><code class="docutils literal notranslate"><span class="pre">heykube.read_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.send_hint"><code class="docutils literal notranslate"><span class="pre">heykube.send_hint()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.send_prompt"><code class="docutils literal notranslate"><span class="pre">heykube.send_prompt()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.set_match"><code class="docutils literal notranslate"><span class="pre">heykube.set_match()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.software_reset"><code class="docutils literal notranslate"><span class="pre">heykube.software_reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.turn_hints_off"><code class="docutils literal notranslate"><span class="pre">heykube.turn_hints_off()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.turn_hints_on"><code class="docutils literal notranslate"><span class="pre">heykube.turn_hints_on()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.turn_off_led"><code class="docutils literal notranslate"><span class="pre">heykube.turn_off_led()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.wait"><code class="docutils literal notranslate"><span class="pre">heykube.wait()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.wait_for_cube_state"><code class="docutils literal notranslate"><span class="pre">heykube.wait_for_cube_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.wait_for_notify"><code class="docutils literal notranslate"><span class="pre">heykube.wait_for_notify()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.write_cube_state"><code class="docutils literal notranslate"><span class="pre">heykube.write_cube_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.write_instructions"><code class="docutils literal notranslate"><span class="pre">heykube.write_instructions()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#heykube.Cube"><code class="docutils literal notranslate"><span class="pre">Cube</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#heykube.Match"><code class="docutils literal notranslate"><span class="pre">Match</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.add_cross"><code class="docutils literal notranslate"><span class="pre">Match.add_cross()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.add_cross_color"><code class="docutils literal notranslate"><span class="pre">Match.add_cross_color()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.add_face"><code class="docutils literal notranslate"><span class="pre">Match.add_face()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.clear"><code class="docutils literal notranslate"><span class="pre">Match.clear()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.solved"><code class="docutils literal notranslate"><span class="pre">Match.solved()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 </ul>
 
@@ -82,6 +138,445 @@
 <p>HEYKUBE is still in beta, with lots of work to clean it up.
 Check the examples directory, or run the command line interface</p>
 </div>
+<span class="target" id="module-heykube"></span><dl class="py class">
+<dt class="sig sig-object py" id="heykube.heykube">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">heykube.</span></span><span class="sig-name descname"><span class="pre">heykube</span></span><a class="headerlink" href="#heykube.heykube" title="Permalink to this definition"></a></dt>
+<dd><p>Defines the HEYKUBE class</p>
+<p>Includes ability to connect/disconnect from HEYKUBEs
+Program lights and sounds
+Send custom instructions
+Query the cube state, register for moves and notifications</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.append_instructions">
+<span class="sig-name descname"><span class="pre">append_instructions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instr_moves</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.append_instructions" title="Permalink to this definition"></a></dt>
+<dd><p>Appends more instructions to the instructions queue</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.clear_instructions">
+<span class="sig-name descname"><span class="pre">clear_instructions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.clear_instructions" title="Permalink to this definition"></a></dt>
+<dd><p>Clears the instructions queue, and returns to the internal solver</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.clear_notify">
+<span class="sig-name descname"><span class="pre">clear_notify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.clear_notify" title="Permalink to this definition"></a></dt>
+<dd><p>Clear out old notify messages we do not need</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Connects to a specified HEYKUBE device
+device is a BLEDevice from bleak, and should be used from get_device</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.disable_match">
+<span class="sig-name descname"><span class="pre">disable_match</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.disable_match" title="Permalink to this definition"></a></dt>
+<dd><p>Disables the match from firing</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.disable_notifications">
+<span class="sig-name descname"><span class="pre">disable_notifications</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.disable_notifications" title="Permalink to this definition"></a></dt>
+<dd><p>Disables BTLE notifications</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.disable_sounds">
+<span class="sig-name descname"><span class="pre">disable_sounds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.disable_sounds" title="Permalink to this definition"></a></dt>
+<dd><p>This method temporarily disables the sounds from the cube during the duration
+of the BTLE connection session</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.disconnect">
+<span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.disconnect" title="Permalink to this definition"></a></dt>
+<dd><p>Disconnects from a HEYKUBE device and clean-up connection</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.enable_match">
+<span class="sig-name descname"><span class="pre">enable_match</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.enable_match" title="Permalink to this definition"></a></dt>
+<dd><p>Enables the match to fire again since it disable after each match</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.enable_notifications">
+<span class="sig-name descname"><span class="pre">enable_notifications</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">notify_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.enable_notifications" title="Permalink to this definition"></a></dt>
+<dd><p>Registers for notifications from HEYKUBE</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.enable_pattern">
+<span class="sig-name descname"><span class="pre">enable_pattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.enable_pattern" title="Permalink to this definition"></a></dt>
+<dd><p>If HEYKUBE is solved, enables instructiosn for the specified pattern</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.enable_sounds">
+<span class="sig-name descname"><span class="pre">enable_sounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">major_sound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor_sound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.enable_sounds" title="Permalink to this definition"></a></dt>
+<dd><p>Reenables HEYKUBE sounds if they were previous disables</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.flash_all_lights">
+<span class="sig-name descname"><span class="pre">flash_all_lights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.flash_all_lights" title="Permalink to this definition"></a></dt>
+<dd><p>This method flashes all the LEDs on the HEYKUBE</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.get_device">
+<span class="sig-name descname"><span class="pre">get_device</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.get_device" title="Permalink to this definition"></a></dt>
+<dd><p>Scans input args and finds a HEYKUBE for connection
+Defines the HEYKUBE connection options</p>
+<dl>
+<dt>optional arguments:</dt><dd><dl class="option-list">
+<dt><kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></dt>
+<dd><p>show this help message and exit</p>
+</dd>
+<dt><kbd><span class="option">--verbose</span></kbd></dt>
+<dd><p>increase output verbosity</p>
+</dd>
+<dt><kbd><span class="option">-n <var>NAME</var></span>, <span class="option">--name <var>NAME</var></span></kbd></dt>
+<dd><p>Directly defines name of a HEYKUBE for connection</p>
+</dd>
+<dt><kbd><span class="option">-a <var>ADDRESS</var></span>, <span class="option">--address <var>ADDRESS</var></span></kbd></dt>
+<dd><p>Directly defines an HEYKUBE MAC address for connection</p>
+</dd>
+<dt><kbd><span class="option">-s</span>, <span class="option">--scan</span></kbd></dt>
+<dd><p>Scans and reports all the available HEYKUBES</p>
+</dd>
+<dt><kbd><span class="option">-d</span>, <span class="option">--debug</span></kbd></dt>
+<dd><p>Turns on debug prints</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.get_notify">
+<span class="sig-name descname"><span class="pre">get_notify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.get_notify" title="Permalink to this definition"></a></dt>
+<dd><p>Get immediate notification from the queue if it is there, otherwise returns None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.get_pattern_name">
+<span class="sig-name descname"><span class="pre">get_pattern_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.get_pattern_name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a pattern name for a given index</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.get_pattern_names">
+<span class="sig-name descname"><span class="pre">get_pattern_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.get_pattern_names" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all the pattern names</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.get_seq_num">
+<span class="sig-name descname"><span class="pre">get_seq_num</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.get_seq_num" title="Permalink to this definition"></a></dt>
+<dd><p>Reads the current sequence number from the cube</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.get_timestamp">
+<span class="sig-name descname"><span class="pre">get_timestamp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.get_timestamp" title="Permalink to this definition"></a></dt>
+<dd><p>Reads the current timestamp from the cube</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.initialize">
+<span class="sig-name descname"><span class="pre">initialize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.initialize" title="Permalink to this definition"></a></dt>
+<dd><p>This method resets the internal state of the HEYKUBE back to the solved state</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.is_solved">
+<span class="sig-name descname"><span class="pre">is_solved</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.is_solved" title="Permalink to this definition"></a></dt>
+<dd><p>This method checks if the HEYKUBE is in the solved state</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool – Returns True is the cube is solved</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.light_led">
+<span class="sig-name descname"><span class="pre">light_led</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">led_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.light_led" title="Permalink to this definition"></a></dt>
+<dd><p>This method will manual light one of the LEDs on the cube</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>face</strong> (<em>int.</em>) – Picks one of 6 faces to light up</p></li>
+<li><p><strong>index</strong> – Picks 1 of 6 indexes</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.play_sound">
+<span class="sig-name descname"><span class="pre">play_sound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">select</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.play_sound" title="Permalink to this definition"></a></dt>
+<dd><p>This method plays a sound on the HEYKUBE device</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>select</strong> – Selects the sound index between 0-7</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.print_cube">
+<span class="sig-name descname"><span class="pre">print_cube</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.print_cube" title="Permalink to this definition"></a></dt>
+<dd><p>This method reads the current state of HEYKUBE and prints to the screen</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_accel">
+<span class="sig-name descname"><span class="pre">read_accel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.read_accel" title="Permalink to this definition"></a></dt>
+<dd><p>This method returns the full orientation of the cube in space using
+the on-board 3D-accelerometer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>which face is up, along with X,Y and Z acceleration vector</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_battery">
+<span class="sig-name descname"><span class="pre">read_battery</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.read_battery" title="Permalink to this definition"></a></dt>
+<dd><p>Reads the battery status and charging state</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_instructions">
+<span class="sig-name descname"><span class="pre">read_instructions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.read_instructions" title="Permalink to this definition"></a></dt>
+<dd><p>This method connects to the HEYKUBE and reads-out the current
+list of instructions that are currently in queue</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str – Returns the list of rotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_moves">
+<span class="sig-name descname"><span class="pre">read_moves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prev_seq_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.read_moves" title="Permalink to this definition"></a></dt>
+<dd><p>Reads up to the last 42 moves from HEYKUBE</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_status">
+<span class="sig-name descname"><span class="pre">read_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.read_status" title="Permalink to this definition"></a></dt>
+<dd><p>This method reads up to the last 3 status events registered in the HEYKUBE</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><p>list – Returns a list of the up to last 3 status events, None is status is empty
+status_dict :</p>
+<blockquote>
+<div><dl>
+<dt>’solution’<span class="classifier">’scrambed:x’ | ‘bottom_cross:x’ | ‘bottom_layer:x’ |</span></dt><dd><blockquote>
+<div><p>’middle_layer:x’ | ‘top_layer_cross:x’ |
+‘top_layer_face:x’ | ‘top_layer_corner:x’ |
+‘solved:0’ - where x is [0-3],</p>
+</div></blockquote>
+<p>’last_move’         : ‘o|O|w|W|r|R|y|Y|b|B|g|G’,
+‘timestamp’         : &lt;running time in secs&gt;,
+‘match’             : True,
+‘instruction_empty’ : True,
+‘instruction_max’   : True,
+‘seq_num’           :  [0-255]}</p>
+</dd>
+</dl>
+</div></blockquote>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_version">
+<span class="sig-name descname"><span class="pre">read_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.read_version" title="Permalink to this definition"></a></dt>
+<dd><p>Reads the current SW version</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.send_hint">
+<span class="sig-name descname"><span class="pre">send_hint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.send_hint" title="Permalink to this definition"></a></dt>
+<dd><p>This method plays a hint on the faces</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.send_prompt">
+<span class="sig-name descname"><span class="pre">send_prompt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.send_prompt" title="Permalink to this definition"></a></dt>
+<dd><p>This method flashes the LEDs on the HEYKUBE, typically used when the user
+solves the cube</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.set_match">
+<span class="sig-name descname"><span class="pre">set_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">match</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.set_match" title="Permalink to this definition"></a></dt>
+<dd><p>This method allows the user to set the match from the class Match object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.software_reset">
+<span class="sig-name descname"><span class="pre">software_reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.software_reset" title="Permalink to this definition"></a></dt>
+<dd><p>This method issues a software reset through BTLE</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.turn_hints_off">
+<span class="sig-name descname"><span class="pre">turn_hints_off</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.turn_hints_off" title="Permalink to this definition"></a></dt>
+<dd><p>Turns hints off on HEYKUBE - they will return once solved</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.turn_hints_on">
+<span class="sig-name descname"><span class="pre">turn_hints_on</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.turn_hints_on" title="Permalink to this definition"></a></dt>
+<dd><p>Turns HEYKUBE hints back on</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.turn_off_led">
+<span class="sig-name descname"><span class="pre">turn_off_led</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.turn_off_led" title="Permalink to this definition"></a></dt>
+<dd><p>This method turns off all the LEDs on the HEYKUBE</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.wait">
+<span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.wait" title="Permalink to this definition"></a></dt>
+<dd><p>This method is used to wait for specified time</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.wait_for_cube_state">
+<span class="sig-name descname"><span class="pre">wait_for_cube_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prev_seq_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.wait_for_cube_state" title="Permalink to this definition"></a></dt>
+<dd><p>This method is used to wait for events from the HEYKUBE
+and includes a timeout mechanism if the event never happens</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout</strong> (<em>float.</em>) – Specifies the timeout duration in seconds</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>dict – Returns a dictionary with notifications events, None is status is empty</p>
+<dl>
+<dt>’solution’<span class="classifier">’scrambed:x’ | ‘bottom_cross:x’ | ‘bottom_layer:x’ |</span></dt><dd><blockquote>
+<div><p>’middle_layer:x’ | ‘top_layer_cross:x’ |
+‘top_layer_face:x’ | ‘top_layer_corner:x’ |
+‘solved:0’ - where x is [0-3],</p>
+</div></blockquote>
+<p>’last_move’         : ‘o|O|w|W|r|R|y|Y|b|B|g|G’,
+‘timestamp’         : &lt;running time in secs&gt;,
+‘match’             : True,
+‘double_tap’        : True,
+‘charger’           : True,
+‘instruction_empty’ : True,
+‘instruction_max’   : True,
+‘seq_num’           :  [0-255]</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.wait_for_notify">
+<span class="sig-name descname"><span class="pre">wait_for_notify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prev_seq_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.wait_for_notify" title="Permalink to this definition"></a></dt>
+<dd><p>This method is used to wait for events from the HEYKUBE
+and includes a timeout mechanism if the event never happens</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout</strong> (<em>float.</em>) – Specifies the timeout duration in seconds</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>dict – Returns a dictionary with notifications events, None is status is empty</p>
+<dl class="simple">
+<dt>’solution’<span class="classifier">’scrambed:x’ | ‘bottom_cross:x’ | ‘bottom_layer:x’ |</span></dt><dd><p>’middle_layer:x’ | ‘top_layer_cross:x’ |
+‘top_layer_face:x’ | ‘top_layer_corner:x’ |
+‘solved:0’ - where x is [0-3],</p>
+</dd>
+</dl>
+<p>’last_move’         : ‘U|L|F|R|B|D[‘]’,
+‘match’             : True,
+‘instruction_empty’ : True,
+‘instruction_max’   : True,
+‘seq_num’           : [0-255]
+‘timestamp’         : &lt;running time in seconds&gt;</p>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.write_cube_state">
+<span class="sig-name descname"><span class="pre">write_cube_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.write_cube_state" title="Permalink to this definition"></a></dt>
+<dd><p>Overrides the internal cube state –expert only</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.write_instructions">
+<span class="sig-name descname"><span class="pre">write_instructions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instr_moves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">append</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.write_instructions" title="Permalink to this definition"></a></dt>
+<dd><p>This method allows the user to send a custom list of instructions
+to the HEYKUBE device. The faces on the LEDs will light up in
+sequence the users defines</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Moves</strong><strong>(</strong><strong>)</strong> (<em>Class</em>) – Holds the list of moves</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="heykube.Cube">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">heykube.</span></span><span class="sig-name descname"><span class="pre">Cube</span></span><a class="headerlink" href="#heykube.Cube" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="heykube.Match">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">heykube.</span></span><span class="sig-name descname"><span class="pre">Match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_set</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.Match" title="Permalink to this definition"></a></dt>
+<dd><p>Defines the Match() class which enables HEYKUBE to match with
+certain patterns, and provide a notification</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.add_cross">
+<span class="sig-name descname"><span class="pre">add_cross</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">face</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.Match.add_cross" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the match for the cross on that face</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.add_cross_color">
+<span class="sig-name descname"><span class="pre">add_cross_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">face_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.Match.add_cross_color" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the match for a cross - but just colors on that face</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.add_face">
+<span class="sig-name descname"><span class="pre">add_face</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">face</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.Match.add_face" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the match for the colors on that face</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.Match.clear" title="Permalink to this definition"></a></dt>
+<dd><p>Clears the match object back to don’t care on all Facelets</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.solved">
+<span class="sig-name descname"><span class="pre">solved</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#heykube.Match.solved" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the match to a fully solved cube</p>
+</dd></dl>
+
+</dd></dl>
+
 <p>This block shows how to connect to an initial HEYKUBE</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">heykube</span>
 <span class="kn">import</span> <span class="nn">time</span>
