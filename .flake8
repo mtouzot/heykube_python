@@ -1,5 +1,5 @@
 [flake8]
-ignore = E203, E241, W501
+ignore = BLK100, E203, E241, W501, W503
 exclude =
     .git,
     .github,
