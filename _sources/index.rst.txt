@@ -21,9 +21,8 @@ Contents:
    installation
    cli
    usage
+   ./heykube/modules.rst
    license.rst
-
-
 
 Indices and tables
 ==================
