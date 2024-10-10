@@ -4,14 +4,6 @@ heykube package
 Submodules
 ----------
 
-heykube.cube\_color module
---------------------------
-
-.. automodule:: heykube.cube_color
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 heykube.heykube module
 ----------------------
 

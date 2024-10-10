@@ -1,5 +1,5 @@
-HEYKUBE
-=======
+HEYKUBE PYTHON
+==============
 
 This documents the HEYKUBE python library, letting you connect and program HEYKUBE
 
@@ -19,6 +19,7 @@ Contents:
    :maxdepth: 2
 
    installation
+   heykube/modules.rst
    cli
    usage
    license.rst
