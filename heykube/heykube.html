@@ -4,7 +4,12 @@
 <html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link href="../_static/icon/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="../_static/icon/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
+    <link href="../_static/icon/favicon-32x32.png" sizes="32x32" rel="icon" type="image/png">
+    <link href="../_static/icon/android-chrome-192x192.png" sizes="192x192" rel="icon" type="image/png">
+    <link href="../_static/icon/android-chrome-512x512.png" sizes="512x512" rel="icon" type="image/png">
+    <link href="../_static/icon/apple-touch-icon.png" sizes="180x180" rel="icon" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>heykube package &mdash; HEYKUBE v0.5.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
@@ -18,7 +23,9 @@
       <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CLI" href="../cli.html" />
+    <link rel="prev" title="heykube" href="modules.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,8 +47,29 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">heykube</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">heykube package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-heykube.heykube">heykube.heykube module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#heykube.heykube.Cube"><code class="docutils literal notranslate"><span class="pre">Cube</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#heykube.heykube.Cube_Color"><code class="docutils literal notranslate"><span class="pre">Cube_Color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#heykube.heykube.Facelet"><code class="docutils literal notranslate"><span class="pre">Facelet</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#heykube.heykube.Match"><code class="docutils literal notranslate"><span class="pre">Match</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#heykube.heykube.Moves"><code class="docutils literal notranslate"><span class="pre">Moves</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#heykube.heykube.heykube"><code class="docutils literal notranslate"><span class="pre">heykube</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-heykube.heykube_btle">heykube.heykube_btle module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#heykube.heykube_btle.heykube_btle"><code class="docutils literal notranslate"><span class="pre">heykube_btle</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-heykube">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../cli.html">CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
@@ -61,6 +89,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">heykube</a></li>
       <li class="breadcrumb-item active">heykube package</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/heykube/heykube.rst.txt" rel="nofollow"> View page source</a>
@@ -75,9 +104,6 @@
 <h1>heykube package<a class="headerlink" href="#heykube-package" title="Permalink to this heading"></a></h1>
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
-</section>
-<section id="heykube-cube-color-module">
-<h2>heykube.cube_color module<a class="headerlink" href="#heykube-cube-color-module" title="Permalink to this heading"></a></h2>
 </section>
 <section id="module-heykube.heykube">
 <span id="heykube-heykube-module"></span><h2>heykube.heykube module<a class="headerlink" href="#module-heykube.heykube" title="Permalink to this heading"></a></h2>
@@ -1051,7 +1077,7 @@ to be appended.</p>
 <dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None</p>
+<dd class="field-odd"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1081,7 +1107,7 @@ effectively resetting the instruction state.</p>
 <dd class="field-odd"><p>None</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
+<dd class="field-even"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1097,7 +1123,7 @@ ensure that only new messages are processed in subsequent operations.</p>
 <dd class="field-odd"><p>None</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
+<dd class="field-even"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1130,7 +1156,7 @@ firing until it is explicitly re-enabled.</p>
 <dd class="field-odd"><p>None</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
+<dd class="field-even"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1189,7 +1215,7 @@ it to be fired again.</p>
 <dd class="field-odd"><p>None</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
+<dd class="field-even"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1307,7 +1333,7 @@ for connection</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="heykube.heykube.heykube.get_notify">
-<span class="sig-name descname"><span class="pre">get_notify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.heykube.get_notify" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_notify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.heykube.get_notify" title="Permalink to this definition"></a></dt>
 <dd><p>Get the first notification from the queue.</p>
 <p>Check the notification queue for any incoming messages.
 If a message is present, process and return the status or cube state.</p>
@@ -1317,7 +1343,7 @@ If a message is present, process and return the status or cube state.</p>
 if a notification is available, otherwise None.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>list[str, Any] | None</p>
+<dd class="field-even"><p>List[str, Any] | NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1533,7 +1559,7 @@ representing a specific configuration parameter.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="heykube.heykube.heykube.read_cube">
-<span class="sig-name descname"><span class="pre">read_cube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#heykube.heykube.heykube.read_cube" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">read_cube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.heykube.heykube.read_cube" title="Permalink to this definition"></a></dt>
 <dd><p>Read the value from the specified field and return the response.</p>
 <p>Send a read command for the given field and waits for a response from
 the device. Log the response if received, and time out after 5 seconds
@@ -1546,7 +1572,7 @@ then return an empty list in case of a timeout.</p>
 <dd class="field-even"><p>The data read from the specified field as a list.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
+<dd class="field-odd"><p>List[int]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1564,7 +1590,7 @@ state with the information from the cube.</p>
 and the timestamp.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict[str, Union[int, <a class="reference internal" href="#heykube.heykube.Moves" title="heykube.heykube.Moves">Moves</a>]]</p>
+<dd class="field-even"><p>Dict[str, Union[int, <a class="reference internal" href="#heykube.heykube.Moves" title="heykube.heykube.Moves">Moves</a>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1608,7 +1634,7 @@ available.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="heykube.heykube.heykube.read_moves">
-<span class="sig-name descname"><span class="pre">read_moves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prev_seq_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#heykube.heykube.heykube.read_moves" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">read_moves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prev_seq_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#heykube.heykube.Moves" title="heykube.heykube.Moves"><span class="pre">Moves</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.heykube.heykube.read_moves" title="Permalink to this definition"></a></dt>
 <dd><p>Read up to the last 42 moves from the HEYKUBE.</p>
 <p>This method retrieves the move data from the HEYKUBE and processes it
 to form a list of the last moves executed. If a previous sequence
@@ -1624,7 +1650,7 @@ filter moves, if provided.</p>
 and the timestamp of the last recorded move.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>dict</p>
+<dd class="field-odd"><p>Dict[str, Union[<a class="reference internal" href="#heykube.heykube.Moves" title="heykube.heykube.Moves">Moves</a>, float]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1716,7 +1742,7 @@ to enable or disable the match.</p>
 <dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None</p>
+<dd class="field-odd"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1864,7 +1890,7 @@ for a response after sending the command.</p>
 <dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None</p>
+<dd class="field-odd"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1905,7 +1931,7 @@ otherwise, overwrite the current instructions.</p></li>
 <dd class="field-odd"><p>None</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
+<dd class="field-even"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1925,7 +1951,7 @@ otherwise, overwrite the current instructions.</p></li>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">heykube.heykube_btle.</span></span><span class="sig-name descname"><span class="pre">heykube_btle</span></span><a class="headerlink" href="#heykube.heykube_btle.heykube_btle" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This class manage HEYKUBE BTLE connectivity using Bleak module.</p>
-<p>Extend the <a class="reference internal" href="../usage.html#module-heykube" title="heykube"><code class="xref py py-class docutils literal notranslate"><span class="pre">heykube</span></code></a> class.</p>
+<p>Extend the <a class="reference internal" href="#module-heykube" title="heykube"><code class="xref py py-class docutils literal notranslate"><span class="pre">heykube</span></code></a> class.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="heykube.heykube_btle.heykube_btle.cleanup">
 <em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cleanup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube_btle.heykube_btle.cleanup" title="Permalink to this definition"></a></dt>
@@ -1937,7 +1963,7 @@ connections if the client is initialized.</p>
 <dd class="field-odd"><p>None</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
+<dd class="field-even"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1967,7 +1993,7 @@ integrity.</p>
 <dd class="field-odd"><p>None</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
+<dd class="field-even"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2006,7 +2032,7 @@ reconnections to ensure appropriate notifications are sent.</p>
 <dd class="field-odd"><p>None</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
+<dd class="field-even"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2028,7 +2054,7 @@ of the connection and clears the command queue.</p>
 <dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None</p>
+<dd class="field-odd"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2045,7 +2071,7 @@ confirms when the thread has successfully ended.</p>
 <dd class="field-odd"><p>None</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
+<dd class="field-even"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2113,7 +2139,7 @@ log the exception and handles the error gracefully.</p>
 <dd class="field-odd"><p>None</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
+<dd class="field-even"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2133,7 +2159,7 @@ the disconnection.</p>
 <dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None</p>
+<dd class="field-odd"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2158,7 +2184,7 @@ arguments provided during execution.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="heykube.heykube_btle.heykube_btle.read_cube">
-<span class="sig-name descname"><span class="pre">read_cube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#heykube.heykube_btle.heykube_btle.read_cube" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">read_cube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.heykube_btle.heykube_btle.read_cube" title="Permalink to this definition"></a></dt>
 <dd><p>Read the value from the specified field and return the response.</p>
 <p>Send a read command for the given field and waits for a response from
 the device. Log the response if received, and time out after 5 seconds
@@ -2171,7 +2197,7 @@ then return an empty list in case of a timeout.</p>
 <dd class="field-even"><p>The data read from the specified field as a list.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
+<dd class="field-odd"><p>List[int]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2209,7 +2235,7 @@ found during the scan.</p>
 <dd class="field-odd"><p>None</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
+<dd class="field-even"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2228,7 +2254,7 @@ notifications should be received for the specified field.</p>
 <dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None</p>
+<dd class="field-odd"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2247,7 +2273,7 @@ notifications for the specified field should no longer be received.</p>
 <dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None</p>
+<dd class="field-odd"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2271,7 +2297,7 @@ for a response after sending the command.</p>
 <dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None</p>
+<dd class="field-odd"><p>NoneType</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2287,7 +2313,10 @@ for a response after sending the command.</p>
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="heykube" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../cli.html" class="btn btn-neutral float-right" title="CLI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
