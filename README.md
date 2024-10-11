@@ -67,3 +67,6 @@ hcitool ledc 64
 sudo hciconfig hci0 reset
 ```
 
+## Credits
+
+All favicons have been found here : [Good Ware - Flaticon](https://www.flaticon.com/fr/icones-gratuites/rubik)
