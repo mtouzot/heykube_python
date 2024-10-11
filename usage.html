@@ -4,12 +4,7 @@
 <html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="_static/icon/favicon.ico" rel="icon" type="image/x-icon">
-    <link href="_static/icon/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
-    <link href="_static/icon/favicon-32x32.png" sizes="32x32" rel="icon" type="image/png">
-    <link href="_static/icon/android-chrome-192x192.png" sizes="192x192" rel="icon" type="image/png">
-    <link href="_static/icon/android-chrome-512x512.png" sizes="512x512" rel="icon" type="image/png">
-    <link href="_static/icon/apple-touch-icon.png" sizes="180x180" rel="icon" type="image/png">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Usage &mdash; HEYKUBE v0.5.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
@@ -49,9 +44,100 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="heykube/modules.html">heykube</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cli.html">CLI</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#heykube.heykube"><code class="docutils literal notranslate"><span class="pre">heykube</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.append_instructions"><code class="docutils literal notranslate"><span class="pre">heykube.append_instructions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.calc_battery_capacity"><code class="docutils literal notranslate"><span class="pre">heykube.calc_battery_capacity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.clear_instructions"><code class="docutils literal notranslate"><span class="pre">heykube.clear_instructions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.clear_notify"><code class="docutils literal notranslate"><span class="pre">heykube.clear_notify()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.connect"><code class="docutils literal notranslate"><span class="pre">heykube.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.disable_match"><code class="docutils literal notranslate"><span class="pre">heykube.disable_match()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.disable_notifications"><code class="docutils literal notranslate"><span class="pre">heykube.disable_notifications()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.disable_sounds"><code class="docutils literal notranslate"><span class="pre">heykube.disable_sounds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.disconnect"><code class="docutils literal notranslate"><span class="pre">heykube.disconnect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.enable_match"><code class="docutils literal notranslate"><span class="pre">heykube.enable_match()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.enable_notifications"><code class="docutils literal notranslate"><span class="pre">heykube.enable_notifications()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.enable_pattern"><code class="docutils literal notranslate"><span class="pre">heykube.enable_pattern()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.enable_sounds"><code class="docutils literal notranslate"><span class="pre">heykube.enable_sounds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.flash_all_lights"><code class="docutils literal notranslate"><span class="pre">heykube.flash_all_lights()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.get_device"><code class="docutils literal notranslate"><span class="pre">heykube.get_device()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.get_notify"><code class="docutils literal notranslate"><span class="pre">heykube.get_notify()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.get_pattern_name"><code class="docutils literal notranslate"><span class="pre">heykube.get_pattern_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.get_pattern_names"><code class="docutils literal notranslate"><span class="pre">heykube.get_pattern_names()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.get_seq_num"><code class="docutils literal notranslate"><span class="pre">heykube.get_seq_num()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.get_timestamp"><code class="docutils literal notranslate"><span class="pre">heykube.get_timestamp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.initialize"><code class="docutils literal notranslate"><span class="pre">heykube.initialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.is_solved"><code class="docutils literal notranslate"><span class="pre">heykube.is_solved()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.light_led"><code class="docutils literal notranslate"><span class="pre">heykube.light_led()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.parse_status_info"><code class="docutils literal notranslate"><span class="pre">heykube.parse_status_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.play_sound"><code class="docutils literal notranslate"><span class="pre">heykube.play_sound()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.print_cube"><code class="docutils literal notranslate"><span class="pre">heykube.print_cube()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_accel"><code class="docutils literal notranslate"><span class="pre">heykube.read_accel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_battery"><code class="docutils literal notranslate"><span class="pre">heykube.read_battery()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_config"><code class="docutils literal notranslate"><span class="pre">heykube.read_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_cube"><code class="docutils literal notranslate"><span class="pre">heykube.read_cube()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_cube_state"><code class="docutils literal notranslate"><span class="pre">heykube.read_cube_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_instructions"><code class="docutils literal notranslate"><span class="pre">heykube.read_instructions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_last_status"><code class="docutils literal notranslate"><span class="pre">heykube.read_last_status()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_moves"><code class="docutils literal notranslate"><span class="pre">heykube.read_moves()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_status"><code class="docutils literal notranslate"><span class="pre">heykube.read_status()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.read_version"><code class="docutils literal notranslate"><span class="pre">heykube.read_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.send_hint"><code class="docutils literal notranslate"><span class="pre">heykube.send_hint()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.send_prompt"><code class="docutils literal notranslate"><span class="pre">heykube.send_prompt()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.set_match"><code class="docutils literal notranslate"><span class="pre">heykube.set_match()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.software_reset"><code class="docutils literal notranslate"><span class="pre">heykube.software_reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.turn_hints_off"><code class="docutils literal notranslate"><span class="pre">heykube.turn_hints_off()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.turn_hints_on"><code class="docutils literal notranslate"><span class="pre">heykube.turn_hints_on()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.turn_off_led"><code class="docutils literal notranslate"><span class="pre">heykube.turn_off_led()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.wait"><code class="docutils literal notranslate"><span class="pre">heykube.wait()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.wait_for_cube_state"><code class="docutils literal notranslate"><span class="pre">heykube.wait_for_cube_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.wait_for_notify"><code class="docutils literal notranslate"><span class="pre">heykube.wait_for_notify()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.write_cube"><code class="docutils literal notranslate"><span class="pre">heykube.write_cube()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.write_cube_state"><code class="docutils literal notranslate"><span class="pre">heykube.write_cube_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.heykube.write_instructions"><code class="docutils literal notranslate"><span class="pre">heykube.write_instructions()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#heykube.Cube"><code class="docutils literal notranslate"><span class="pre">Cube</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.apply_moves"><code class="docutils literal notranslate"><span class="pre">Cube.apply_moves()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.clear_moves"><code class="docutils literal notranslate"><span class="pre">Cube.clear_moves()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.decodePerm"><code class="docutils literal notranslate"><span class="pre">Cube.decodePerm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.decode_state"><code class="docutils literal notranslate"><span class="pre">Cube.decode_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.encodePerm"><code class="docutils literal notranslate"><span class="pre">Cube.encodePerm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.encode_state"><code class="docutils literal notranslate"><span class="pre">Cube.encode_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.get_location_color"><code class="docutils literal notranslate"><span class="pre">Cube.get_location_color()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.get_orientation"><code class="docutils literal notranslate"><span class="pre">Cube.get_orientation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.get_piece_color"><code class="docutils literal notranslate"><span class="pre">Cube.get_piece_color()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.get_state"><code class="docutils literal notranslate"><span class="pre">Cube.get_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.initialize"><code class="docutils literal notranslate"><span class="pre">Cube.initialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.is_solved"><code class="docutils literal notranslate"><span class="pre">Cube.is_solved()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.print_piece_square"><code class="docutils literal notranslate"><span class="pre">Cube.print_piece_square()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.recover_cstate_data"><code class="docutils literal notranslate"><span class="pre">Cube.recover_cstate_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.reset_orientation"><code class="docutils literal notranslate"><span class="pre">Cube.reset_orientation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.set_state"><code class="docutils literal notranslate"><span class="pre">Cube.set_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Cube.test_match"><code class="docutils literal notranslate"><span class="pre">Cube.test_match()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#heykube.Match"><code class="docutils literal notranslate"><span class="pre">Match</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.add_cross"><code class="docutils literal notranslate"><span class="pre">Match.add_cross()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.add_cross_color"><code class="docutils literal notranslate"><span class="pre">Match.add_cross_color()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.add_cubie"><code class="docutils literal notranslate"><span class="pre">Match.add_cubie()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.add_face"><code class="docutils literal notranslate"><span class="pre">Match.add_face()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.add_face_color"><code class="docutils literal notranslate"><span class="pre">Match.add_face_color()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.add_facelet"><code class="docutils literal notranslate"><span class="pre">Match.add_facelet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.add_layer"><code class="docutils literal notranslate"><span class="pre">Match.add_layer()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.add_two_layer"><code class="docutils literal notranslate"><span class="pre">Match.add_two_layer()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.clear"><code class="docutils literal notranslate"><span class="pre">Match.clear()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.decode_state"><code class="docutils literal notranslate"><span class="pre">Match.decode_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.encode_state"><code class="docutils literal notranslate"><span class="pre">Match.encode_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.print_piece_square"><code class="docutils literal notranslate"><span class="pre">Match.print_piece_square()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.restore_center"><code class="docutils literal notranslate"><span class="pre">Match.restore_center()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.solved"><code class="docutils literal notranslate"><span class="pre">Match.solved()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heykube.Match.to_list"><code class="docutils literal notranslate"><span class="pre">Match.to_list()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 </ul>
 
@@ -86,6 +172,1540 @@
 <p>HEYKUBE is still in beta, with lots of work to clean it up.
 Check the examples directory, or run the command line interface</p>
 </div>
+<span class="target" id="module-heykube"></span><dl class="py class">
+<dt class="sig sig-object py" id="heykube.heykube">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">heykube.</span></span><span class="sig-name descname"><span class="pre">heykube</span></span><a class="headerlink" href="#heykube.heykube" title="Permalink to this definition"></a></dt>
+<dd><p>Define the HEYKUBE class.</p>
+<p>Include ability to connect/disconnect from HEYKUBEs
+Program lights and sounds
+Send custom instructions
+Query the cube state, register for moves and notifications</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.append_instructions">
+<span class="sig-name descname"><span class="pre">append_instructions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instr_moves</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Moves" title="heykube.heykube.Moves"><span class="pre">Moves</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.append_instructions" title="Permalink to this definition"></a></dt>
+<dd><p>Append more instructions to the instructions queue.</p>
+<p>Add additional instructions to the existing list of instructions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>instr_moves</strong> (<a class="reference internal" href="heykube/heykube.html#heykube.heykube.Moves" title="heykube.heykube.Moves"><em>Moves</em></a>) – A Moves object that holds the list of moves
+to be appended.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.calc_battery_capacity">
+<span class="sig-name descname"><span class="pre">calc_battery_capacity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batt_voltage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#heykube.heykube.calc_battery_capacity" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the battery capacity given the battery voltage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The battery capacity</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.clear_instructions">
+<span class="sig-name descname"><span class="pre">clear_instructions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.clear_instructions" title="Permalink to this definition"></a></dt>
+<dd><p>Clear the instructions queue, return to the internal solver.</p>
+<p>Send a command to the HEYKUBE to clear any queued instructions,
+effectively resetting the instruction state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.clear_notify">
+<span class="sig-name descname"><span class="pre">clear_notify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.clear_notify" title="Permalink to this definition"></a></dt>
+<dd><p>Clear out old notification messages from the queue.</p>
+<p>Remove all notifications currently in the notification queue to
+ensure that only new messages are processed in subsequent operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BLEDevice</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#heykube.heykube.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Connect to a specified Bluetooth Low Energy (BLE) device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>device</strong> (<em>BLEDevice</em>) – A BLEDevice from the bleak library</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the connection was successful, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.disable_match">
+<span class="sig-name descname"><span class="pre">disable_match</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.disable_match" title="Permalink to this definition"></a></dt>
+<dd><p>Disable the match from firing.</p>
+<p>Disable the match feature in the HEYKUBE, preventing it from
+firing until it is explicitly re-enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.disable_notifications">
+<span class="sig-name descname"><span class="pre">disable_notifications</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.disable_notifications" title="Permalink to this definition"></a></dt>
+<dd><p>Disable Bluetooth Low Energy notifications from the HEYKUBE device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.disable_sounds">
+<span class="sig-name descname"><span class="pre">disable_sounds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.disable_sounds" title="Permalink to this definition"></a></dt>
+<dd><p>Disable the sounds during the BTLE connection session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.disconnect">
+<span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#heykube.heykube.disconnect" title="Permalink to this definition"></a></dt>
+<dd><p>Disconnect from the currently connected HEYKUBE device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the disconnection was successful, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.enable_match">
+<span class="sig-name descname"><span class="pre">enable_match</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.enable_match" title="Permalink to this definition"></a></dt>
+<dd><p>Enable the match to fire again since it disable after each match.</p>
+<p>Re-enable the match functionality in the HEYKUBE. The match feature
+is automatically disabled after each match, and this method allows
+it to be fired again.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.enable_notifications">
+<span class="sig-name descname"><span class="pre">enable_notifications</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">notify_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.enable_notifications" title="Permalink to this definition"></a></dt>
+<dd><p>Register for notifications from HEYKUBE.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>notify_list</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – A list of notification types to subscribe to.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.enable_pattern">
+<span class="sig-name descname"><span class="pre">enable_pattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.enable_pattern" title="Permalink to this definition"></a></dt>
+<dd><p>Enable instructions for the pattern if HEYKUBE is solved.</p>
+<p>Enable a visual pattern on the HEYKUBE, which can be specified either
+by its index (integer) or by its name (string). If the HEYKUBE is not
+in a solved state, the pattern will not be enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pattern</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>str</em><em>]</em>) – The pattern to enable, either as an integer index or
+a string name. The index must be within the range of
+available patterns.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the provided pattern index is out of range or
+the pattern name is not found.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.enable_sounds">
+<span class="sig-name descname"><span class="pre">enable_sounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">major</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.enable_sounds" title="Permalink to this definition"></a></dt>
+<dd><p>Reenable HEYKUBE sounds if they were previous disables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>major</strong> (<em>bool</em>) – enables major tone in sound</p></li>
+<li><p><strong>minor</strong> (<em>bool</em>) – enables minor tone in sound</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.flash_all_lights">
+<span class="sig-name descname"><span class="pre">flash_all_lights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.flash_all_lights" title="Permalink to this definition"></a></dt>
+<dd><p>Flash all the LEDs on the HEYKUBE.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.get_device">
+<span class="sig-name descname"><span class="pre">get_device</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BLEDevice</span></span></span><a class="headerlink" href="#heykube.heykube.get_device" title="Permalink to this definition"></a></dt>
+<dd><p>Scan input args and finds a HEYKUBE for connection.</p>
+<p>Defines the HEYKUBE connection options</p>
+<dl>
+<dt>optional arguments:</dt><dd><dl class="option-list">
+<dt><kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></dt>
+<dd><p>show this help message and exit</p>
+</dd>
+<dt><kbd><span class="option">--verbose</span></kbd></dt>
+<dd><p>increase output verbosity</p>
+</dd>
+<dt><kbd><span class="option">-n <var>NAME</var></span>, <span class="option">--name <var>NAME</var></span></kbd></dt>
+<dd><p>Directly defines name of a HEYKUBE
+for connection</p>
+</dd>
+<dt><kbd><span class="option">-a <var>ADDRESS</var></span>, <span class="option">--address <var>ADDRESS</var></span></kbd></dt>
+<dd><p>Directly defines an HEYKUBE MAC address
+for connection</p>
+</dd>
+<dt><kbd><span class="option">-s</span>, <span class="option">--scan</span></kbd></dt>
+<dd><p>Scans and reports all the available HEYKUBES</p>
+</dd>
+<dt><kbd><span class="option">-d</span>, <span class="option">--debug</span></kbd></dt>
+<dd><p>Turns on debug prints</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The connected device</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>BLEDevice</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.get_notify">
+<span class="sig-name descname"><span class="pre">get_notify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.get_notify" title="Permalink to this definition"></a></dt>
+<dd><p>Get the first notification from the queue.</p>
+<p>Check the notification queue for any incoming messages.
+If a message is present, process and return the status or cube state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of the notification type and its associated data
+if a notification is available, otherwise None.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[str, Any] | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.get_pattern_name">
+<span class="sig-name descname"><span class="pre">get_pattern_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#heykube.heykube.get_pattern_name" title="Permalink to this definition"></a></dt>
+<dd><p>Return a pattern name for a given index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – A given patter index</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pattern name</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.get_pattern_names">
+<span class="sig-name descname"><span class="pre">get_pattern_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.heykube.get_pattern_names" title="Permalink to this definition"></a></dt>
+<dd><p>Return all the pattern names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The list of pattern names.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.get_seq_num">
+<span class="sig-name descname"><span class="pre">get_seq_num</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#heykube.heykube.get_seq_num" title="Permalink to this definition"></a></dt>
+<dd><p>Read the current sequence number from the cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current sequence number.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.get_timestamp">
+<span class="sig-name descname"><span class="pre">get_timestamp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#heykube.heykube.get_timestamp" title="Permalink to this definition"></a></dt>
+<dd><p>Read the current timestamp from the cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current timestamp in milliseconds.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.initialize">
+<span class="sig-name descname"><span class="pre">initialize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.initialize" title="Permalink to this definition"></a></dt>
+<dd><p>Reset the internal state back to the solved state.</p>
+<p>Initialize the internal cube state to the solved state,
+send the state to the HEYKUBE, and clear any previous moves.
+Also read the current cube state to ensure synchronization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.is_solved">
+<span class="sig-name descname"><span class="pre">is_solved</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#heykube.heykube.is_solved" title="Permalink to this definition"></a></dt>
+<dd><p>Check if the HEYKUBE is in the solved state.</p>
+<p>Reads the current cube state and checks if the HEYKUBE is solved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True is the cube is solved; False, otherwise.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.light_led">
+<span class="sig-name descname"><span class="pre">light_led</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">led_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.light_led" title="Permalink to this definition"></a></dt>
+<dd><p>Light one of the LEDs on the cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>led_index</strong> (<em>int</em>) – Picks one of 6 faces to light up</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.parse_status_info">
+<span class="sig-name descname"><span class="pre">parse_status_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status_bytes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.heykube.parse_status_info" title="Permalink to this definition"></a></dt>
+<dd><p>Parse HEYKUBE status informations.</p>
+<p>Extract relevant status information from the provided list of status
+bytes and return it as a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status_bytes</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – The received status bytes from the HEYKUBE.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing parsed status information,
+including solution state, sequence number,
+and timestamp.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HKStatus</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.play_sound">
+<span class="sig-name descname"><span class="pre">play_sound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">select</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.play_sound" title="Permalink to this definition"></a></dt>
+<dd><p>Play a sound on the HEYKUBE device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>select</strong> – Selects the sound index between 0-7</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.print_cube">
+<span class="sig-name descname"><span class="pre">print_cube</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.print_cube" title="Permalink to this definition"></a></dt>
+<dd><p>Read the current state of HEYKUBE and prints it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_accel">
+<span class="sig-name descname"><span class="pre">read_accel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.heykube.read_accel" title="Permalink to this definition"></a></dt>
+<dd><p>Return the cube orientation using the on-board 3D accelerometer.</p>
+<p>Retrieve the current orientation of the cube by reading
+the accelerometer data, along with the 3D acceleration vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A tuple with the upper face and the acceleration vector.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple[str, List[float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_battery">
+<span class="sig-name descname"><span class="pre">read_battery</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.heykube.read_battery" title="Permalink to this definition"></a></dt>
+<dd><p>Read the battery status and charging state.</p>
+<p>Retrieve the battery voltage and charging status from the HEYKUBE.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A tuple containing the battery capacity (float),
+battery voltage (float), and charging status (int).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple[float, float, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_config">
+<span class="sig-name descname"><span class="pre">read_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.heykube.read_config" title="Permalink to this definition"></a></dt>
+<dd><p>Read the HEYKUBE configuration.</p>
+<p>Retrieve the current configuration settings of the HEYKUBE.
+The configuration data is returned as a list of integers, each
+representing a specific configuration parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of integers representing the HEYKUBE configuration.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_cube">
+<span class="sig-name descname"><span class="pre">read_cube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#heykube.heykube.read_cube" title="Permalink to this definition"></a></dt>
+<dd><p>Read the value from the specified field and return the response.</p>
+<p>Send a read command for the given field and waits for a response from
+the device. Log the response if received, and time out after 5 seconds
+then return an empty list in case of a timeout.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>field</strong> (<em>str</em>) – The field to be read from.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The data read from the specified field as a list.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_cube_state">
+<span class="sig-name descname"><span class="pre">read_cube_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Moves" title="heykube.heykube.Moves"><span class="pre">Moves</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.heykube.read_cube_state" title="Permalink to this definition"></a></dt>
+<dd><p>Read the HEYKUBE state.</p>
+<p>Retrieve the current state of the HEYKUBE, including the sequence
+number, moves made, and the timestamp. Update the internal cube
+state with the information from the cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary containing the sequence number, list of moves,
+and the timestamp.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, Union[int, <a class="reference internal" href="heykube/heykube.html#heykube.heykube.Moves" title="heykube.heykube.Moves">Moves</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_instructions">
+<span class="sig-name descname"><span class="pre">read_instructions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Moves" title="heykube.heykube.Moves"><span class="pre">Moves</span></a></span></span><a class="headerlink" href="#heykube.heykube.read_instructions" title="Permalink to this definition"></a></dt>
+<dd><p>Read out the queued instructions.</p>
+<p>Retrieve the list of rotation instructions from the HEYKUBE and
+process them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Moves containing the list of instructions from queue.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Moves" title="heykube.heykube.Moves">Moves</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_last_status">
+<span class="sig-name descname"><span class="pre">read_last_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.read_last_status" title="Permalink to this definition"></a></dt>
+<dd><p>Read the last status from the HEYKUBE.</p>
+<p>Retrieve the most recent status event from the HEYKUBE.
+If no status events are available, return None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>dict or None – Returns the most recent status event as a</dt><dd><p>dictionary, or None if no status events are
+available.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Optional[Dict[str, Any]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_moves">
+<span class="sig-name descname"><span class="pre">read_moves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prev_seq_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#heykube.heykube.read_moves" title="Permalink to this definition"></a></dt>
+<dd><p>Read up to the last 42 moves from the HEYKUBE.</p>
+<p>This method retrieves the move data from the HEYKUBE and processes it
+to form a list of the last moves executed. If a previous sequence
+number is provided, it will filter the moves to include only those
+that occurred after that sequence number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prev_seq_num</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – The previous sequence number to
+filter moves, if provided.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing the sequence number, list of moves,
+and the timestamp of the last recorded move.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_status">
+<span class="sig-name descname"><span class="pre">read_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.heykube.read_status" title="Permalink to this definition"></a></dt>
+<dd><p>Read up to the last 3 status events registered.</p>
+<p>Retrieve the last three status events from the HEYKUBE and return
+them as a list of dictionaries. If there are fewer than three events,
+only the available events are returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list containing up to the last 3 status events,
+or None if no status events are available.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[Optional[Dict[str, Any]]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.read_version">
+<span class="sig-name descname"><span class="pre">read_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.heykube.read_version" title="Permalink to this definition"></a></dt>
+<dd><p>Read the current software version of the HEYKUBE.</p>
+<p>Retrieve the current version information from the HEYKUBE,
+including version number, battery status, motion status, and other
+configurations. Log also relevant information about the HEYKUBE’s
+state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary containing various HEYKUBE information.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict[str, Union[bool, str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.send_hint">
+<span class="sig-name descname"><span class="pre">send_hint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.send_hint" title="Permalink to this definition"></a></dt>
+<dd><p>Play a hint on the faces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int.</em>) – Picks one of 6 faces to light up</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.send_prompt">
+<span class="sig-name descname"><span class="pre">send_prompt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.send_prompt" title="Permalink to this definition"></a></dt>
+<dd><p>Flash the LEDs on the HEYKUBE, typically when the cube is solved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index to determine the LED flash pattern (0-5).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.set_match">
+<span class="sig-name descname"><span class="pre">set_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">match</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Match" title="heykube.heykube.Match"><span class="pre">Match</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.set_match" title="Permalink to this definition"></a></dt>
+<dd><p>Set the match configuration from the provided Match object.</p>
+<p>Allow the user to define the match settings, specifying whether
+to enable or disable the match.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>match</strong> (<a class="reference internal" href="heykube/heykube.html#heykube.heykube.Match" title="heykube.heykube.Match"><em>Match</em></a>) – The Match object containing the match settings.</p></li>
+<li><p><strong>enable</strong> (<em>bool</em>) – Flag to enable or disable the match (default is True).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.software_reset">
+<span class="sig-name descname"><span class="pre">software_reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.software_reset" title="Permalink to this definition"></a></dt>
+<dd><p>Issue a software reset through BTLE.</p>
+<p>Send a predefined action sequence to the HEYKUBE to initiate
+a software reset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.turn_hints_off">
+<span class="sig-name descname"><span class="pre">turn_hints_off</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.turn_hints_off" title="Permalink to this definition"></a></dt>
+<dd><p>Turn hints off on HEYKUBE - they will return once solved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.turn_hints_on">
+<span class="sig-name descname"><span class="pre">turn_hints_on</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.turn_hints_on" title="Permalink to this definition"></a></dt>
+<dd><p>Turn HEYKUBE hints back on.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.turn_off_led">
+<span class="sig-name descname"><span class="pre">turn_off_led</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.turn_off_led" title="Permalink to this definition"></a></dt>
+<dd><p>Turn off all the LEDs on the HEYKUBE.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.wait">
+<span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.wait" title="Permalink to this definition"></a></dt>
+<dd><p>Wait for specified time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout</strong> (<em>int</em>) – Duration to wait in seconds. Default is 10 seconds.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None:</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.wait_for_cube_state">
+<span class="sig-name descname"><span class="pre">wait_for_cube_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prev_seq_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.heykube.wait_for_cube_state" title="Permalink to this definition"></a></dt>
+<dd><p>Wait for events from the HEYKUBE.</p>
+<p>Listen for notifications regarding the cube’s state and collect move
+information. If the specified timeout elapses without receiving
+an event, the method will exit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prev_seq_num</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – The previous sequence number to calculate
+the number of moves. Defaults to None.</p></li>
+<li><p><strong>timeout</strong> (<em>int.</em>) – Specifies the timeout duration in seconds</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Number of Moves and a dictionary with notifications events.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[int, dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.wait_for_notify">
+<span class="sig-name descname"><span class="pre">wait_for_notify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prev_seq_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.heykube.wait_for_notify" title="Permalink to this definition"></a></dt>
+<dd><p>Wait for events from the HEYKUBE.</p>
+<p>Listen for notifications from the HEYKUBE device, including status
+updates. A timeout mechanism is included to exit the method if
+no event is received within the specified time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prev_seq_num</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – The previous sequence number to calculate the
+number of moves (default is None).</p></li>
+<li><p><strong>timeout</strong> (<em>float</em>) – Specifies the timeout duration in seconds.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple containing the number of new moves and a dict with
+notification events. Returns (0, {}) if nothing was received.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[int, dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.write_cube">
+<span class="sig-name descname"><span class="pre">write_cube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.write_cube" title="Permalink to this definition"></a></dt>
+<dd><p>Send a write command to update the specified field with data.</p>
+<p>Add a write command to the command queue, sending the specified data
+to the given field. The optional parameter determines whether to wait
+for a response after sending the command.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>field</strong> (<em>str</em>) – The field to which the data will be written.</p></li>
+<li><p><strong>data</strong> (<em>bytes</em>) – The data to be written to the field.</p></li>
+<li><p><strong>wait_for_response</strong> (<em>bool</em><em>, </em><em>optional</em>) – Indicates whether to wait for a response.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.write_cube_state">
+<span class="sig-name descname"><span class="pre">write_cube_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.write_cube_state" title="Permalink to this definition"></a></dt>
+<dd><p>Override the internal cube state – expert only.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – The state to set for the cube.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.heykube.write_instructions">
+<span class="sig-name descname"><span class="pre">write_instructions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instr_moves</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Moves" title="heykube.heykube.Moves"><span class="pre">Moves</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">append</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube.write_instructions" title="Permalink to this definition"></a></dt>
+<dd><p>Send a custom list of instructions to the HEYKUBE.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>instr_moves</strong> (<a class="reference internal" href="heykube/heykube.html#heykube.heykube.Moves" title="heykube.heykube.Moves"><em>Moves</em></a>) – A Moves object that holds the moves to be sent.</p></li>
+<li><p><strong>append</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, append instructions to the existing list;
+otherwise, overwrite the current instructions.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the number of instructions exceeds max limit.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="heykube.Cube">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">heykube.</span></span><span class="sig-name descname"><span class="pre">Cube</span></span><a class="headerlink" href="#heykube.Cube" title="Permalink to this definition"></a></dt>
+<dd><p>Define the Cube class.</p>
+<p>Hold the model of a 3x3 cube.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.apply_moves">
+<span class="sig-name descname"><span class="pre">apply_moves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moves</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Moves" title="heykube.heykube.Moves"><span class="pre">Moves</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Cube.apply_moves" title="Permalink to this definition"></a></dt>
+<dd><p>Apply a sequence of moves to the current Cube object.</p>
+<p>Iterate through the given moves, update the cube’s state based
+on a predefined rotation table, and maintain a sequence number
+for tracking the number of moves applied.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>moves</strong> (<a class="reference internal" href="heykube/heykube.html#heykube.heykube.Moves" title="heykube.heykube.Moves"><em>Moves</em></a>) – A sequence of moves to apply to the cube. Each move is
+representing a rotation or transformation.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.clear_moves">
+<span class="sig-name descname"><span class="pre">clear_moves</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Cube.clear_moves" title="Permalink to this definition"></a></dt>
+<dd><p>Clear all moves from the device.</p>
+<p>Reset the move history of the cube, ensuring that no previous moves
+are retained in the internal state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.decodePerm">
+<span class="sig-name descname"><span class="pre">decodePerm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.Cube.decodePerm" title="Permalink to this definition"></a></dt>
+<dd><p>Decode a cube permutation.</p>
+<p>Decode a given permutation value (lex) into a list of indices
+representing the positions of the pieces in the permutation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lex</strong> (<em>int</em>) – The lexicographic index of the permutation to decode.</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – The total number of elements in the permutation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of integers representing the decoded permutation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.decode_state">
+<span class="sig-name descname"><span class="pre">decode_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cstate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.Cube.decode_state" title="Permalink to this definition"></a></dt>
+<dd><p>Decode the cube state to reconstruct its configurations.</p>
+<p>Take an encoded cube state and reconstruct the cube’s configurations
+by determining the placement and orientation of edge and corner.
+Check the validity of the reconstructed state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cstate</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – A list of integers representing the encoded cube state.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing a validity flag, the reconstructed state,
+and the center orientation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[bool, List[int], int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.encodePerm">
+<span class="sig-name descname"><span class="pre">encodePerm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#heykube.Cube.encodePerm" title="Permalink to this definition"></a></dt>
+<dd><p>Encode a cube permutation.</p>
+<p>Take a list of indices representing a permutation and encode it into a
+single integer value. The encoding is based on the lexicographic order
+of the permutations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>a</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – A list of integers representing the permutation indices.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An integer representing the encoded permutation, or -1 if the
+permutation is invalid.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.encode_state">
+<span class="sig-name descname"><span class="pre">encode_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.Cube.encode_state" title="Permalink to this definition"></a></dt>
+<dd><p>Encode the Cube state to a list of byte.</p>
+<p>Encode the current state of the cube into an 11-byte list
+representation. Calculate the orientation of edges and corners,
+as well as the permutation of the cube, allowing for a compact
+representation of the cube’s state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of integers representing the encoded cube state.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.get_location_color">
+<span class="sig-name descname"><span class="pre">get_location_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cube_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Facelet" title="heykube.heykube.Facelet"><span class="pre">Facelet</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Cube_Color" title="heykube.heykube.Cube_Color"><span class="pre">Cube_Color</span></a></span></span><a class="headerlink" href="#heykube.Cube.get_location_color" title="Permalink to this definition"></a></dt>
+<dd><p>Return the color of the selected cube at the current state.</p>
+<p>Retrieve the color corresponding to the specified cube index based on
+the current state of the cube. The cube index should be an integer
+representing the position of the facelet or a Facelet object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cube_index</strong> – The cube index for which to retrieve the color.</p></li>
+<li><p><strong>cube_index</strong> – Facelet or int</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The color of the specified cube.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Cube_Color" title="heykube.heykube.Cube_Color">Cube_Color</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.get_orientation">
+<span class="sig-name descname"><span class="pre">get_orientation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span></span></span><a class="headerlink" href="#heykube.Cube.get_orientation" title="Permalink to this definition"></a></dt>
+<dd><p>Get the current Cube orientation with UP and FRONT faces.</p>
+<p>Retrieve the colors of the UP and FRONT faces of the cube, construct
+a dictionary to represent the current orientation, and log
+the orientation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary containing the colors of the UP and FRONT
+cube faces, with keys “U” and “F” respectively.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.get_piece_color">
+<span class="sig-name descname"><span class="pre">get_piece_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cube_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Facelet" title="heykube.heykube.Facelet"><span class="pre">Facelet</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Cube_Color" title="heykube.heykube.Cube_Color"><span class="pre">Cube_Color</span></a></span></span><a class="headerlink" href="#heykube.Cube.get_piece_color" title="Permalink to this definition"></a></dt>
+<dd><p>Return the color of the selected cube when solved.</p>
+<p>Retrieve the color corresponding to the specified cube index based on
+the solved state of the cube. The cube index should be an integer
+representing the position of the facelet or a Facelet object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cube_index</strong> – The cube index for which to retrieve the color.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The color of the specified cube in the solved position.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Cube_Color" title="heykube.heykube.Cube_Color">Cube_Color</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.get_state">
+<span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.Cube.get_state" title="Permalink to this definition"></a></dt>
+<dd><p>Return the current cube state.</p>
+<p>Encode the cube’s current configuration into a state representation
+and return it as a list of integers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of integers representing the current state.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.initialize">
+<span class="sig-name descname"><span class="pre">initialize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Cube.initialize" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize the state list with default values for a solved cube.</p>
+<p>Reset the cube state to the default solved position by setting each
+element of the state list to its index. Also clear the current move
+sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.is_solved">
+<span class="sig-name descname"><span class="pre">is_solved</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#heykube.Cube.is_solved" title="Permalink to this definition"></a></dt>
+<dd><p>Check if the cube is solved.</p>
+<p>Iterate through the cube’s state to verify that each facelet is in
+its correct position, returning True if all facelets are correctly
+aligned and False otherwise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the cube is solved, False otherwise</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.print_piece_square">
+<span class="sig-name descname"><span class="pre">print_piece_square</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Facelet" title="heykube.heykube.Facelet"><span class="pre">Facelet</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#heykube.Cube.print_piece_square" title="Permalink to this definition"></a></dt>
+<dd><p>Print on console the piece of cube with the color as background.</p>
+<p>Generate a string that represents a piece of the cube, with its
+background color corresponding to the piece’s color in the cube.
+The piece can also be optionally labeled with its index value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>val</strong> (<a class="reference internal" href="heykube/heykube.html#heykube.heykube.Facelet" title="heykube.heykube.Facelet"><em>Facelet</em></a><em> of </em><em>int</em>) – The index of the cube piece to print.</p></li>
+<li><p><strong>label</strong> (<em>bool</em>) – A boolean flag indicating whether to include the
+piece’s index in the output. Defaults to True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A formatted string with ANSI color codes for console output.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.recover_cstate_data">
+<span class="sig-name descname"><span class="pre">recover_cstate_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cstate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.Cube.recover_cstate_data" title="Permalink to this definition"></a></dt>
+<dd><p>Recover the permutation and orientation from the given cstate.</p>
+<p>Decode the cube’s state information, including edge and corner
+permutations and orientations, from the provided cstate list.
+Check the validity of the state and returns the relevant data
+for further processing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cstate</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – A list of integers representing the encoded cube state.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing a validity flag, edge permutation,
+edge orientation, corner permutation, corner orientation,
+and center orientation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[bool, List[int], int, List[int], int, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.reset_orientation">
+<span class="sig-name descname"><span class="pre">reset_orientation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Cube.reset_orientation" title="Permalink to this definition"></a></dt>
+<dd><p>Reset the cube orientation to default reference position.</p>
+<p>Reorient the cube based on the color of the facelets, specifically
+ensuring the white face is oriented correctly and then adjusting
+the position of the green face as needed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.set_state">
+<span class="sig-name descname"><span class="pre">set_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cstate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Cube.set_state" title="Permalink to this definition"></a></dt>
+<dd><p>Update the internal Cube state.</p>
+<p>Set the cube’s state based on the provided state list, which must
+contain at least 20 integers. Updates the cube’s internal state,
+moves, and sequence number if the provided state is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cstate</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – A list of integers representing the cube’s state.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Cube.test_match">
+<span class="sig-name descname"><span class="pre">test_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">match</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Match" title="heykube.heykube.Match"><span class="pre">Match</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#heykube.Cube.test_match" title="Permalink to this definition"></a></dt>
+<dd><p>Check if the match corresponds to the current cube’s state.</p>
+<p>Compare the current state of the cube with a given match object,
+checking each facelet color against the expected color in the match.
+If all matched colors correspond or are set to ‘DontCare’,
+return True; otherwise, return False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>match</strong> (<a class="reference internal" href="#heykube.Match" title="heykube.Match"><em>Match</em></a>) – The match object containing the expected cube state.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the current state matches match, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="heykube.Match">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">heykube.</span></span><span class="sig-name descname"><span class="pre">Match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Cube" title="heykube.heykube.Cube"><span class="pre">Cube</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.Match" title="Permalink to this definition"></a></dt>
+<dd><p>Define the Match class.</p>
+<p>Enable HEYKUBE to match with patterns, and provide a notification.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.add_cross">
+<span class="sig-name descname"><span class="pre">add_cross</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">face_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Match.add_cross" title="Permalink to this definition"></a></dt>
+<dd><p>Set the match for the cross on the specified face.</p>
+<p>Set the match state to reflect a cross on the face indicated by
+face_name.Apply first the cross color using add_cross_color,
+then update the match_state for the specified face’s edge pieces to
+correspond with the correct color.
+If invalid face name is provided, log an error message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>face_name</strong> (<em>str</em><em> or </em><em>int</em>) – The face name to set the cross on.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.add_cross_color">
+<span class="sig-name descname"><span class="pre">add_cross_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">face_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Match.add_cross_color" title="Permalink to this definition"></a></dt>
+<dd><p>Set the match for a cross - but just colors on that face.</p>
+<p>Update the match_state to reflect the colors of the cross on the
+specified face. Identify the color corresponding to the face and apply
+it to the edge pieces that form the cross.
+If an invalid face name is provided, log an error message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>face_name</strong> (<em>str</em><em> or </em><em>int</em>) – The face name to set the cross color on.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.add_cubie">
+<span class="sig-name descname"><span class="pre">add_cubie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">facelet_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Match.add_cubie" title="Permalink to this definition"></a></dt>
+<dd><p>Add a cubie to the current match state.</p>
+<p>Add a cubie (a set of connected facelets) to the current match_state.
+Based on the provided facelet_name, determine the cubie to which the
+facelet belongs and update the match state for all the facelets of
+that cubie with their corresponding colors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>facelet_name</strong> (<em>int</em><em> or </em><em>str</em>) – The Facelets name in the cubie to add.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.add_face">
+<span class="sig-name descname"><span class="pre">add_face</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">face_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Match.add_face" title="Permalink to this definition"></a></dt>
+<dd><p>Set the match for the colors on the specified face.</p>
+<p>Set the match state for a particular face of the cube based on the
+face name provided. Assign colors to the corresponding facelets for
+the given face (U, L, F, R, B, or D).
+If an invalid face name is provided, log an error message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>face_name</strong> (<em>str</em>) – The name of the face to set (U, L, F, R, B, or D).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.add_face_color">
+<span class="sig-name descname"><span class="pre">add_face_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">face_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Match.add_face_color" title="Permalink to this definition"></a></dt>
+<dd><p>Set the colors on the specified Facelet.</p>
+<p>Set all 9 facelets of a given face to the same color corresponding to
+the face_name provided. Calculate the index of the face based on
+the facelet’s color and updates the match state for each facelet in
+that face.
+If an invalid face name is provided, log an error message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>face_name</strong> (<em>str</em>) – The name of the face to color (U, L, F, R, B, or D).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.add_facelet">
+<span class="sig-name descname"><span class="pre">add_facelet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">facelet_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Match.add_facelet" title="Permalink to this definition"></a></dt>
+<dd><p>Add a Facelet to the current match state.</p>
+<p>Add a single Facelet to the match_state. Based on the provided
+facelet_name, determine the corresponding Facelet and update its
+position in the match_state with its color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>facelet_name</strong> (<em>int</em><em> or </em><em>str</em>) – The name of the Facelet to add.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.add_layer">
+<span class="sig-name descname"><span class="pre">add_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">face</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'U'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Match.add_layer" title="Permalink to this definition"></a></dt>
+<dd><p>Set the match for the colors on the specified face.</p>
+<p>Set the match state for a particular face of the cube, applying the
+colors to the corresponding facelets based on the face name provided.
+Call the add_face method to handle the color assignment.
+The default face is the upper face (“U”).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>face</strong> (<em>str</em>) – The name of the face to set (default is “U”).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.add_two_layer">
+<span class="sig-name descname"><span class="pre">add_two_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">face</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'U'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Match.add_two_layer" title="Permalink to this definition"></a></dt>
+<dd><p>Set the match for both the face and its adjacent second layer.</p>
+<p>Set the match state for a given face and the adjacent second layer of
+the cube. Call first add_layer to set the colors for the specified
+face, and then apply the colors to the adjacent layer based on
+predefined face color sets. If an invalid face name is provided, an
+error is logged.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>face</strong> (<em>str</em>) – The name of the face to set (default is “U”).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Match.clear" title="Permalink to this definition"></a></dt>
+<dd><p>Clear the Match object, setting all Facelets to ‘DontCare’.</p>
+<p>Reset all 54 facelets in the match_state to DontCare, effectively
+clearing the match state. Afterward, restore the center pieces of
+each face to their original colors using restore_center().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.decode_state">
+<span class="sig-name descname"><span class="pre">decode_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytearray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Match.decode_state" title="Permalink to this definition"></a></dt>
+<dd><p>Decode the current state of the cube.</p>
+<p>Process a byte array to update the cube’s state based on the encoded
+color information. The color values are extracted for each face of
+the cube using bit manipulation, with special handling for the center
+pieces of each face (which are fixed and not encoded).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>bytes</em>) – A byte array representing the encoded cube state.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.encode_state">
+<span class="sig-name descname"><span class="pre">encode_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.Match.encode_state" title="Permalink to this definition"></a></dt>
+<dd><p>Encode the current state of the cube.</p>
+<p>Encode the state of the cube into a list of integers (bytearray).
+Processe each non-center piece on each face of the cube, applying bit
+manipulation to pack the cube colors into the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of integers representing the encoded cube state.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.print_piece_square">
+<span class="sig-name descname"><span class="pre">print_piece_square</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="heykube/heykube.html#heykube.heykube.Cube_Color" title="heykube.heykube.Cube_Color"><span class="pre">Cube_Color</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#heykube.Match.print_piece_square" title="Permalink to this definition"></a></dt>
+<dd><p>Print the color name with the color as background.</p>
+<p>Return a string formatted with ANSI escape codes that represents
+a colored square corresponding to the specified color.
+Each color has a specific background and text color, making it
+visually identifiable when printed in a terminal that supports
+ANSI color codes.
+If an unknown color index is provided, return a default gray square.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>color_index</strong> (<a class="reference internal" href="heykube/heykube.html#heykube.heykube.Cube_Color" title="heykube.heykube.Cube_Color"><em>Cube_Color</em></a>) – The color index to be printed.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A string containing the formatted color representation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.restore_center">
+<span class="sig-name descname"><span class="pre">restore_center</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Match.restore_center" title="Permalink to this definition"></a></dt>
+<dd><p>Restore the center pieces of the Match object.</p>
+<p>Restore the center pieces of each face in the match_state to their
+original colors. Each face has a fixed center color corresponding
+to its face index (0 to 5), which this method reassigns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.solved">
+<span class="sig-name descname"><span class="pre">solved</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.Match.solved" title="Permalink to this definition"></a></dt>
+<dd><p>Set the match to a fully solved cube.</p>
+<p>Set the match_state to represent fully solved cube configuration.
+Assign the color corresponding to each face to all 9 facelets of that
+face, ensuring that each of the six faces has its color correctly
+represented.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="heykube.Match.to_list">
+<span class="sig-name descname"><span class="pre">to_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#heykube.Match.to_list" title="Permalink to this definition"></a></dt>
+<dd><p>Convert the Match object to a list of integers.</p>
+<p>Convert the match_state of the current Match object into a list of
+integers, representing the color value of each non-center piece.
+Skip the center pieces (positions 4, 13, 22, etc.) as they
+are fixed and not included in the output list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of integers representing the color values of the
+non-center pieces.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <p>This block shows how to connect to an initial HEYKUBE</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">heykube</span>
 <span class="kn">import</span> <span class="nn">time</span>
