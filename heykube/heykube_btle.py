@@ -314,7 +314,7 @@ class heykube_btle:
         confirms when the thread has successfully ended.
 
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         # send the disconnect command
         self.cmd_queue.put(["disconnect"])
@@ -324,7 +324,7 @@ class heykube_btle:
         self.thread.join()
         self.logger.info("Done with thread")
 
-    def read_cube(self, field: str) -> list:
+    def read_cube(self, field: str) -> List[int]:
         """
         Read the value from the specified field and return the response.
 
@@ -335,7 +335,7 @@ class heykube_btle:
         :param field: The field to be read from.
         :type field: str
         :returns: The data read from the specified field as a list.
-        :rtype: list
+        :rtype: List[int]
         """
         # read the characteristics
         start_time = time.time()
@@ -370,7 +370,7 @@ class heykube_btle:
         :param wait_for_response: Indicates whether to wait for a response.
         :type wait_for_response: bool, optional
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         # send the disconnect command
         self.cmd_queue.put(["write", field, data])
@@ -385,7 +385,7 @@ class heykube_btle:
         :param field: The field from which notifications will be unsubscribed.
         :type field: str
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         self.cmd_queue.put(["unsubscribe", field])
 
@@ -399,7 +399,7 @@ class heykube_btle:
         :param field: The field to which notifications will be subscribed.
         :type field: str
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         self.cmd_queue.put(["subscribe", field])
 
@@ -417,7 +417,7 @@ class heykube_btle:
         :param client: The BLEAK client instance that has disconnected.
         :type client: BleakClient
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         self.connected = False
         print("Disconnected from HEYKUBE")
@@ -435,7 +435,7 @@ class heykube_btle:
         :param device: The Bluetooth device to connect to.
         :type device: BLEDevice
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         # Get a new loop
         self.loop = asyncio.new_event_loop()
@@ -471,7 +471,7 @@ class heykube_btle:
         reconnections to ensure appropriate notifications are sent.
 
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         connection_retries = 0
         first_connection = True
@@ -551,7 +551,7 @@ class heykube_btle:
         - "unsubscribe": Unsubscribes from notifications from the device.
 
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         num_tries = 0
         cmd = [None, None]
@@ -716,7 +716,7 @@ class heykube_btle:
         connections if the client is initialized.
 
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         self.logger.info("Cleaning up")
         if self.client:
@@ -731,7 +731,7 @@ class heykube_btle:
         found during the scan.
 
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         # Clear previous devices
         self.scan_devices = list()
@@ -772,7 +772,7 @@ class heykube_btle:
         :raises Exception: If an error occurs while processing,
                         log the exception and handles the error gracefully.
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         try:
             self.logger.info("Notification from {}".format(sender))

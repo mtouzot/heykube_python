@@ -286,7 +286,7 @@ class Match:
 
         :returns: A list containing a Facelet object and the corresponding
                 color from the match_state.
-        :rtype: list
+        :rtype: List[Facelet, Cube_Color]
         :raises StopIteration: If the iteration exceeds 54 elements.
         """
         if self.iter_index < 54:
@@ -1226,6 +1226,7 @@ class Cube_Color(Enum):
         Yellow (int): Represents the color yellow on the cube.
         DontCare (int): Represents a neutral color for facelets.
     """
+
     White = 0
     Orange = 1
     Green = 2
@@ -3464,7 +3465,7 @@ class heykube:
 
         return device
 
-    def read_cube(self, field: str) -> list:
+    def read_cube(self, field: str) -> List[int]:
         """
         Read the value from the specified field and return the response.
 
@@ -3475,7 +3476,7 @@ class heykube:
         :param field: The field to be read from.
         :type field: str
         :returns: The data read from the specified field as a list.
-        :rtype: list
+        :rtype: List[int]
         """
         return self.connectivity.read_cube(field)
 
@@ -3496,7 +3497,7 @@ class heykube:
         :param wait_for_response: Indicates whether to wait for a response.
         :type wait_for_response: bool, optional
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         success = self.connectivity.write_cube(field, data, wait_for_response)
         # TODO for now, make sure command is written before we return
@@ -3678,7 +3679,7 @@ class heykube:
         # Parse status bytes
         return num_moves, status_out
 
-    def get_notify(self) -> list | None:
+    def get_notify(self) -> List[str, Any] | None:
         """
         Get the first notification from the queue.
 
@@ -3687,7 +3688,7 @@ class heykube:
 
         :returns: List of the notification type and its associated data
                 if a notification is available, otherwise None.
-        :rtype: list[str, Any] | None
+        :rtype: List[str, Any] | NoneType
         """
         status_out = None
         if not self.notify_queue.empty():
@@ -3710,7 +3711,7 @@ class heykube:
         ensure that only new messages are processed in subsequent operations.
 
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         while not self.notify_queue.empty():
             self.notify_queue.get()
@@ -3739,7 +3740,9 @@ class heykube:
         return self.pattern_names[index & 0xF]
 
     # Setup test mode
-    def read_moves(self, prev_seq_num: Optional[int] = None) -> dict:
+    def read_moves(
+        self, prev_seq_num: Optional[int] = None
+    ) -> Dict[str, Union[Moves, float]]:
         """
         Read up to the last 42 moves from the HEYKUBE.
 
@@ -3753,7 +3756,7 @@ class heykube:
         :type prev_seq_num: Optional[int]
         :returns: A dictionary containing the sequence number, list of moves,
                 and the timestamp of the last recorded move.
-        :rtype: dict
+        :rtype: Dict[str, Union[Moves, float]]
         """
         # Read the moves
         y = self.read_cube("Moves")
@@ -3917,7 +3920,7 @@ class heykube:
         it to be fired again.
 
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         self.write_cube("MatchState", [1])
 
@@ -3929,7 +3932,7 @@ class heykube:
         firing until it is explicitly re-enabled.
 
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         self.write_cube("MatchState", [0])
 
@@ -3945,7 +3948,7 @@ class heykube:
         :param enable: Flag to enable or disable the match (default is True).
         :type enable: bool
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         data = list()
 
@@ -3976,7 +3979,7 @@ class heykube:
         effectively resetting the instruction state.
 
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         self.write_cube("Instructions", [0x0])
 
@@ -3990,7 +3993,7 @@ class heykube:
                             to be appended.
         :type instr_moves: Moves
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         self.write_instructions(instr_moves, append=True)
 
@@ -4007,7 +4010,7 @@ class heykube:
         :type append: bool, optional
         :raises ValueError: If the number of instructions exceeds max limit.
         :returns: None
-        :rtype: None
+        :rtype: NoneType
         """
         data = list()
         if len(instr_moves) > 52:
@@ -4155,7 +4158,7 @@ class heykube:
 
         :returns: A dictionary containing the sequence number, list of moves,
                 and the timestamp.
-        :rtype: dict[str, Union[int, Moves]]
+        :rtype: Dict[str, Union[int, Moves]]
         """
         y = self.read_cube("CubeState")
         self.cube.set_state(y)
