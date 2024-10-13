@@ -54,7 +54,7 @@ class Match:
     """
 
     def __init__(self, init_set: Optional[Union[Cube, str]] = None) -> None:
-        """Match constructor.
+        """Match class constructor.
 
         :param init_set: The initial state of the match, either a Cube object
                          or a string representing the cube state.
@@ -658,13 +658,15 @@ class Moves:
     Translation between cubing notication U|L|F|R|B|D and the HEYKUBE index.
     """
 
-    def __init__(self, move_str=""):
+    def __init__(self, move_str: str = "") -> None:
         """
-        Initialize the Moves object.
+        Moves class constructor.
 
         :param move_str: A string representing the sequence of moves,
                          defaults to an empty string.
         :type move_str: str
+        :returns: None
+        :rtype: NoneType
         """
         self.move_list = list()
         self.move_index = 0
@@ -1248,8 +1250,15 @@ class Facelet:
     face. It serves as a basic unit for cube representation and manipulation.
     """
 
-    def __init__(self, facelet_name: int | str = None):
-        """HEYKUBE Facelet constructor."""
+    def __init__(self, facelet_name: Optional[Union[int, str]] = None) -> None:
+        """
+        Facelet class constructor.
+
+        :param facelete_name: Facelet name
+        :type facelet_name: int or str, optional
+        :returns: None
+        :rtype: NoneType
+        """
         # define facelets
         self.facelets = {
             # UP FACE
@@ -1499,8 +1508,13 @@ class Cube:
     Hold the model of a 3x3 cube.
     """
 
-    def __init__(self):
-        """Class constructor."""
+    def __init__(self) -> None:
+        """
+        Cube class constructor.
+
+        :returns: None
+        :rtype: NoneType
+        """
         # Initialize the state
         self.state = list()
         for loop1 in range(54):
@@ -3343,8 +3357,13 @@ class heykube:
     Query the cube state, register for moves and notifications
     """
 
-    def __init__(self):
-        """Class contructor."""
+    def __init__(self) -> None:
+        """
+        heykube class contructor.
+
+        :returns: None
+        :rtype: NoneType
+        """
         self.cube = Cube()
 
         # Defines debug level

@@ -55,17 +55,17 @@ class heykube_btle:
 
     client: BleakClient = None
 
-    def __init__(self):
+    def __init__(self) -> None:
         """
-        heykube_btle constructor to initialize the HEYKUBE BTLE class.
+        heykube_btle class constructor.
 
         Set up logging, initialize device state, create queues for command,
         read, and notification handling, and configures the UUIDs for
         various characteristics related to the HEYKUBE device.
         Define common Bluetooth disconnect reasons.
 
-        :returns: An integer indicating the initialization status.
-        :rtype: int
+        :returns: None
+        :rtype: NoneType
         """
         self.logger = logging.getLogger("heykube_btle")
         self.logger.info("Initializing HEYKUBE BTLE class")
