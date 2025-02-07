@@ -51,6 +51,41 @@ class heykube_btle:
     This class manage HEYKUBE BTLE connectivity using Bleak module.
 
     Extend the :class:`heykube` class.
+
+    :ivar logger: object's prompt logger named `heykube_btle`
+    :type logger: Logger
+    :ivar client: Bleak Client to manage Bluetooth Low Energy devices
+    :type client: BleakClient
+    :ivar connected: Device connection status
+    :type connected: bool
+    :ivar disconnected: Device disconnection status
+    :type disconnected: bool
+    :ivar reconnected: Device reconnection status
+    :type reconnected: bool
+    :ivar connected_device: connected Bluetooth Low Energy device
+    :type connected_device: BLEDevice
+    :ivar cmd_queue: Queue to manage commands
+    :type cmd_queue: Queue
+    :ivar read_queue:
+    :type read_queue: Queue
+    :ivar notify_queue:
+    :type notify_queue: Queue
+    :ivar device: NOT USED
+    :type device: NoneType
+    :ivar addr: NOT USED
+    :type addr: NoneType
+    :ivar heykube_uuid: Device UUID
+    :type heykube_uuid: str
+    :ivar char_uuid: Characterics UUID
+    :type char_uuid: Dict[str, str]
+    :ivar char_handles: Notifications to handle
+    :type char_handles: Dict[int, str]
+    :ivar disconnect_reasons: Reason of device disconnection
+    :type disconnect_reasons: Dict[bytes, str]
+    :ivar scan_devices: List of scanned devices
+    :type scan_devices: List[str]
+    :ivar loop: event loop to manage Bluetooth and set up the BLEAK client
+    :type loop: asyncio.new_event_loop()
     """
 
     client: BleakClient = None
