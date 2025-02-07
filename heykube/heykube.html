@@ -12,7 +12,7 @@
     <link href="../_static/icon/apple-touch-icon.png" sizes="180x180" rel="icon" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>heykube package &mdash; HEYKUBE v0.5.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
   
@@ -507,7 +507,7 @@ DontCare (int): Represents a neutral color for facelets.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="heykube.heykube.Facelet">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">heykube.heykube.</span></span><span class="sig-name descname"><span class="pre">Facelet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">facelet_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.Facelet" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">heykube.heykube.</span></span><span class="sig-name descname"><span class="pre">Facelet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">facelet_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.Facelet" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Define Facelet class.</p>
 <p>A HEYKUBE facelet represents an individual colored square on a HEYKUBE
@@ -859,7 +859,7 @@ non-center pieces.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="heykube.heykube.Moves">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">heykube.heykube.</span></span><span class="sig-name descname"><span class="pre">Moves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">move_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.Moves" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">heykube.heykube.</span></span><span class="sig-name descname"><span class="pre">Moves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">move_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#heykube.heykube.Moves" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Define the moves for HEYKUBE.</p>
 <p>Translation between cubing notication U|L|F|R|B|D and the HEYKUBE index.</p>
@@ -1952,6 +1952,29 @@ otherwise, overwrite the current instructions.</p></li>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This class manage HEYKUBE BTLE connectivity using Bleak module.</p>
 <p>Extend the <a class="reference internal" href="#module-heykube" title="heykube"><code class="xref py py-class docutils literal notranslate"><span class="pre">heykube</span></code></a> class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logger</strong> – object’s prompt logger named <cite>heykube_btle</cite></p></li>
+<li><p><strong>client</strong> – Bleak Client to manage Bluetooth Low Energy devices</p></li>
+<li><p><strong>connected</strong> – Device connection status</p></li>
+<li><p><strong>disconnected</strong> – Device disconnection status</p></li>
+<li><p><strong>reconnected</strong> – Device reconnection status</p></li>
+<li><p><strong>connected_device</strong> – connected Bluetooth Low Energy device</p></li>
+<li><p><strong>cmd_queue</strong> – Queue to manage commands</p></li>
+<li><p><strong>read_queue</strong> – </p></li>
+<li><p><strong>notify_queue</strong> – </p></li>
+<li><p><strong>device</strong> – NOT USED</p></li>
+<li><p><strong>addr</strong> – NOT USED</p></li>
+<li><p><strong>heykube_uuid</strong> – Device UUID</p></li>
+<li><p><strong>char_uuid</strong> – Characterics UUID</p></li>
+<li><p><strong>char_handles</strong> – Notifications to handle</p></li>
+<li><p><strong>disconnect_reasons</strong> – Reason of device disconnection</p></li>
+<li><p><strong>scan_devices</strong> – List of scanned devices</p></li>
+<li><p><strong>loop</strong> – event loop to manage Bluetooth and set up the BLEAK client</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="heykube.heykube_btle.heykube_btle.cleanup">
 <em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cleanup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#heykube.heykube_btle.heykube_btle.cleanup" title="Permalink to this definition"></a></dt>
