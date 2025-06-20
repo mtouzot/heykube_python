@@ -1,6 +1,9 @@
 # HEYKUBE Python Library (WIP fork)
 
-You could previously buy HEYKUBE HW [here](https://www.heykube.com) but website seems closed and [heykube](https://github.com/heykube) last comimit was done in 2021. 
+~~[Feb. 7 2025] You could previously buy HEYKUBE HW [here](https://www.heykube.com) but website seems closed and [heykube](https://github.com/heykube) last comimit was done in 2021.~~
+
+[Jun. 20 2025] You could previously buy HEYKUBE HW [here](https://www.heykube.com) but even if website seems open, you could not buy the cube because of an error when updating your cart and [heykube](https://github.com/heykube) last comimit was done in 2021.
+
 However you can still find original [Read the Docs](https://heykube-python.readthedocs.io/en/latest/index.html).
 
 Thanks open source to keep the hardware alive by allowing people to dev stuff related to a _dead_ product.
